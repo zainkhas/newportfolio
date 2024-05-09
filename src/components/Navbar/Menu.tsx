@@ -22,7 +22,7 @@ const Menu: FC<MenuProps> = ({ isMenuOpen, menu }) => {
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         {menu.map(({ name, path }) => (
           <NavbarItem key={name}>
-            <Link color="foreground" href={path}>
+            <Link color="foreground" href={path} className="text-xl">
               {name}
             </Link>
           </NavbarItem>

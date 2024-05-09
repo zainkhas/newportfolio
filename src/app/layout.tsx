@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
-// import { Inter } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 import { Navbar } from "@/components/Navbar";
 import { getMenuItems } from "@/datahelpers/getMenuItems";
 
-// const inter = Inter({ subsets: ["latin"] });
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  display: "swap"
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,7 +23,7 @@ export default async function RootLayout({
   const menu = await getMenuItems();
   return (
     <html lang="en" className="dark">
-      <body>
+      <body className={plusJakartaSans.className}>
         <Providers>
           <Navbar menu={menu} />
           {children}

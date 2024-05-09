@@ -5,7 +5,7 @@ import { Navbar as NavbarNextUI } from "@nextui-org/react";
 import Menu from "./Menu";
 import { NavbarComponentProps } from "./types";
 
-export const NavbarComponent: FC<NavbarComponentProps> = ({ menu }) => {
+const NavbarComponent: FC<NavbarComponentProps> = ({ menu }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <NavbarNextUI onMenuOpenChange={setIsMenuOpen}>
@@ -13,3 +13,5 @@ export const NavbarComponent: FC<NavbarComponentProps> = ({ menu }) => {
     </NavbarNextUI>
   );
 };
+
+export default NavbarComponent;

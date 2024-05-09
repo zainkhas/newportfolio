@@ -1,1 +1,1 @@
-export { NavbarComponent as Navbar } from "./Navbar.client";
+export { default as Navbar } from "./Navbar.client";
