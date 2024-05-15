@@ -1,6 +1,4 @@
 import { ReactNode } from "react";
-
-export type ContentProps = {
+export type ResumePaperProps = {
   children: ReactNode;
-  title?: string;
 };

@@ -3,19 +3,20 @@ import MainHeader from "./components/MainHeader";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import SocialLinks from "./components/SocialLinks";
+import Container from "./components/Container";
 
 const App = () => {
   return (
-    <div className="mx-auto container flex flex-col px-32 my-10">
+    <Container>
       <div className="flex flex-col gap-10">
         <MainHeader />
         <About />
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4" id="contact">
           <Contact />
           <SocialLinks />
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 

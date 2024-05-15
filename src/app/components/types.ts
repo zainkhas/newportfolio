@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
 
-export type ContentProps = {
+export type ContainerProps = {
   children: ReactNode;
-  title?: string;
 };

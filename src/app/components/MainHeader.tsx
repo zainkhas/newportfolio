@@ -4,11 +4,10 @@ import { Image, Link } from "@nextui-org/react";
 import NextImage from "next/image";
 import { MAIN_IMAGE_PATH } from "@/constants";
 
-const MainHeader = async () => {
-  const { title, designation, company, company_url, full_name } =
-    await getMetaData();
+const MainHeader = () => {
+  const { title, designation, company, company_url, full_name } = getMetaData();
   return (
-    <div className="flex gap-8 items-center">
+    <div className="flex gap-8 items-center flex-col md:flex-row">
       <Image
         as={NextImage}
         width={130}
@@ -17,9 +16,11 @@ const MainHeader = async () => {
         alt={`${full_name} profile photo`}
         radius="full"
       />
-      <div className="flex flex-col">
-        <span className="text-4xl font-semibold text-headingtext">{title}</span>
-        <span className="text-xl text-headingtext leading-10">
+      <div className="flex flex-col gap-2">
+        <span className="text-2xl md:text-4xl font-semibold text-headingtext text-center md:text-left">
+          {title}
+        </span>
+        <span className="text-lg md:text-xl text-headingtext md:leading-10 text-center md:text-left">
           {designation}
           <Link
             href={company_url}
