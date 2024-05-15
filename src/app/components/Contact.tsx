@@ -4,7 +4,7 @@ import React from "react";
 const Contact = async () => {
   const footer = await getFooter();
   return (
-    <Content>
+    <Content title="Contact">
       <div dangerouslySetInnerHTML={{ __html: footer }} />
     </Content>
   );

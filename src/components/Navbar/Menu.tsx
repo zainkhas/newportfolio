@@ -4,14 +4,20 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
-  Link
+  Link,
+  Navbar
 } from "@nextui-org/react";
 import { FC } from "react";
 import { MenuProps } from "./types";
 
-const Menu: FC<MenuProps> = ({ isMenuOpen, menu }) => {
+const Menu: FC<MenuProps> = ({
+  isMenuOpen,
+  menu,
+  onClick,
+  onMenuOpenChange
+}) => {
   return (
-    <>
+    <Navbar isMenuOpen={isMenuOpen} onMenuOpenChange={onMenuOpenChange}>
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -32,13 +38,19 @@ const Menu: FC<MenuProps> = ({ isMenuOpen, menu }) => {
       <NavbarMenu>
         {menu.map(({ name, path }) => (
           <NavbarMenuItem key={name}>
-            <Link color="foreground" className="w-full" href={path} size="lg">
+            <Link
+              color="foreground"
+              className="w-full"
+              href={path}
+              size="lg"
+              onClick={onClick}
+            >
               {name}
             </Link>
           </NavbarMenuItem>
         ))}
       </NavbarMenu>
-    </>
+    </Navbar>
   );
 };
 

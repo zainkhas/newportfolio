@@ -4,7 +4,7 @@ import { ProjectLinksProps } from "./types";
 
 const ProjectLinks: FC<ProjectLinksProps> = ({ project }) => {
   return (
-    <div className="flex my-5 items-center">
+    <div className="flex items-center gap-4">
       {!!project.website && project.website.length && (
         <IconLink url={project.website} name="Website" icon="link.svg" />
       )}

@@ -4,7 +4,7 @@ import React from "react";
 const About = async () => {
   const about = await getAbout();
   return (
-    <Content>
+    <Content title="About me">
       <div dangerouslySetInnerHTML={{ __html: about }} />
     </Content>
   );

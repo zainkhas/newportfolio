@@ -5,10 +5,12 @@ import ProjectLinks from "./ProjectLinks";
 
 const Project: FC<ProjectItemProps> = ({ project, onImageCick }) => {
   return (
-    <div className="my-5 flex gap-5">
-      <div className="flex-1 flex-col gap-3">
-        <h4 className="font-semibold">{project.name}</h4>
-        <p>{project.description}</p>
+    <div className="my-5 flex gap-5 md:flex-col  flex-col-reverse">
+      <div className="flex flex-1 flex-col gap-4">
+        <div className="flex flex-1 flex-col gap-3">
+          <h4 className="font-semibold text-xl">{project.name}</h4>
+          <p>{project.description}</p>
+        </div>
         <ProjectLinks project={project} />
       </div>
 
