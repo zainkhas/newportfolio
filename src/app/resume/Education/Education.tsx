@@ -10,10 +10,10 @@ const Education: FC<EducationProps> = ({ education }) => (
           <p className="font-medium md:text-xl text-base md:leading-8">
             {education.field}
           </p>
-          <p className="font-medium md:text-xl text-base md:leading-8 text-zinc-400">
+          <p className="font-medium md:text-xl text-base md:leading-8 text-zinc-500 dark:text-zinc-400">
             {education.duration}
           </p>
-          <p className="font-medium md:text-xl text-base md:leading-8 text-zinc-400">
+          <p className="font-medium md:text-xl text-base md:leading-8 text-zinc-500 dark:text-zinc-400">
             {education.institute}
           </p>
         </li>

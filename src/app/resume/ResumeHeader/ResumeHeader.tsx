@@ -10,12 +10,12 @@ const ResumeHeader: FC<ResumeHeaderProps> = ({
     <div>
       <div className="flex flex-col gap-4">
         <h1 className="text-3xl font-semibold md:leading-4">{fullName}</h1>
-        <h3 className="text-zinc-400 text-lg">{tagline}</h3>
+        <h3 className="text-zinc-500 dark:text-zinc-400 text-lg">{tagline}</h3>
         <div className="flex flex-col gap-2">
           {contacts.map((contactItem) => (
             <a
               key={contactItem.name}
-              className="flex items-center text-zinc-400"
+              className="flex items-center text-zinc-500 dark:text-zinc-400"
               href={contactItem.url}
               title={contactItem.name}
               target="_blank"

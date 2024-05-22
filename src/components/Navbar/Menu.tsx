@@ -9,6 +9,7 @@ import {
 } from "@nextui-org/react";
 import { FC } from "react";
 import { MenuProps } from "./types";
+import { ThemeSwitcher } from "../ThemeSwitcher";
 
 const Menu: FC<MenuProps> = ({
   isMenuOpen,
@@ -17,7 +18,11 @@ const Menu: FC<MenuProps> = ({
   onMenuOpenChange
 }) => {
   return (
-    <Navbar isMenuOpen={isMenuOpen} onMenuOpenChange={onMenuOpenChange}>
+    <Navbar
+      className="bg-zinc-50 dark:bg-zinc-900"
+      isMenuOpen={isMenuOpen}
+      onMenuOpenChange={onMenuOpenChange}
+    >
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -33,6 +38,7 @@ const Menu: FC<MenuProps> = ({
             </Link>
           </NavbarItem>
         ))}
+        <ThemeSwitcher />
       </NavbarContent>
 
       <NavbarMenu>

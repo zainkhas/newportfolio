@@ -13,12 +13,12 @@ const Experience: FC<ExperienceProps> = ({ experience, tenure }) => (
           <p className="font-normal md:text-xl text-base md:leading-8">
             {experience.designation}
           </p>
-          <p className="font-medium md:text-xl text-base md:leading-8 text-zinc-400">
+          <p className="font-medium md:text-xl text-base md:leading-8 text-zinc-500 dark:text-zinc-400">
             {`${tenure[experience.company].start} - ${
               tenure[experience.company].end
             }`}
           </p>
-          <p className="font-medium md:text-xl text-base md:leading-8 text-zinc-400">
+          <p className="font-medium md:text-xl text-base md:leading-8 text-zinc-500 dark:text-zinc-400">
             {tenure[experience.company].duration}
           </p>
           <ul className="list-disc list-inside mt-5 mb-10">
