@@ -10,6 +10,14 @@ import { About } from "./About";
 import { Skills } from "./Skills";
 import { Education } from "./Education";
 import { Experience } from "./Experience";
+import { Metadata } from "next";
+import { PAGE_DESCRIPTIONS, PAGE_TITLES } from "@/constants";
+
+export const metadata: Metadata = {
+  title: PAGE_TITLES.RESUME,
+  description: PAGE_DESCRIPTIONS.MAIN
+};
+
 const Resume = () => {
   const resume = getResumeData();
   const skills = getSkills(resume.skills);
