@@ -1,9 +1,10 @@
 "use client";
-import React, { useCallback, useState } from "react";
+import React, { FC, useCallback, useState } from "react";
 import Projects from "./Projects";
 
 import Container from "../components/Container";
 import dynamic from "next/dynamic";
+import { WorkWrapperProps } from "./types";
 
 const ImageViewer = dynamic(
   () => import("@/components/ImageViewer/ImageViewer"),
@@ -12,7 +13,7 @@ const ImageViewer = dynamic(
   }
 );
 
-const WorkWrapper = ({ projects }) => {
+const WorkWrapper: FC<WorkWrapperProps> = ({ projects }) => {
   const images = projects.map((item) => ({ src: `/images/${item.image}` }));
   const [imgViewerState, setImgViewerState] = useState({
     isOpen: false,

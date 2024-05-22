@@ -26,7 +26,7 @@ const Menu: FC<MenuProps> = ({
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden"
+          className="sm:hidden text-zinc-900 dark:text-zinc-50"
         />
       </NavbarContent>
 
@@ -38,7 +38,6 @@ const Menu: FC<MenuProps> = ({
             </Link>
           </NavbarItem>
         ))}
-        <ThemeSwitcher />
       </NavbarContent>
 
       <NavbarMenu>
@@ -56,6 +55,8 @@ const Menu: FC<MenuProps> = ({
           </NavbarMenuItem>
         ))}
       </NavbarMenu>
+
+      <ThemeSwitcher />
     </Navbar>
   );
 };

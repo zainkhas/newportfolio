@@ -1,9 +1,10 @@
 import { Content } from "@/components/Content";
 import ProjectItem from "./ProjectItem";
 
-import React from "react";
+import React, { FC } from "react";
+import { ProjectsProps } from "./types";
 
-const Projects = ({ projects, onImageCick }) => {
+const Projects: FC<ProjectsProps> = ({ projects, onImageCick }) => {
   return (
     <>
       <div className="flex flex-col gap-4">
@@ -17,7 +18,7 @@ const Projects = ({ projects, onImageCick }) => {
               <ProjectItem
                 key={project.name}
                 project={project}
-                onImageCick={() => onImageCick(index)}
+                onImageClick={() => onImageCick(index)}
               />
             ))}
           </Content>

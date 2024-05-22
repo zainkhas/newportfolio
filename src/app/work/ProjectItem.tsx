@@ -3,7 +3,7 @@ import React, { FC } from "react";
 import { ProjectItemProps } from "./types";
 import ProjectLinks from "./ProjectLinks";
 
-const Project: FC<ProjectItemProps> = ({ project, onImageClick }) => {
+const ProjectItem: FC<ProjectItemProps> = ({ project, onImageClick }) => {
   return (
     <div className="my-5 flex gap-5">
       <div className="flex flex-1 flex-col gap-4">
@@ -28,4 +28,4 @@ const Project: FC<ProjectItemProps> = ({ project, onImageClick }) => {
   );
 };
 
-export default Project;
+export default ProjectItem;
