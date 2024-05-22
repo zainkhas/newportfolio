@@ -1,4 +1,4 @@
-import { Experience, Tenures } from "@/common/types";
+import { Experience, Tenures } from "@/types";
 
 export type ExperienceProps = {
   experience: Experience[];
