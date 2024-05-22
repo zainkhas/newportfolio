@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@nextui-org/react": "^2.2.10",
+    "@vercel/speed-insights": "^1.0.10",
     "firebase": "^10.9.0",
     "framer-motion": "^11.0.20",
     "moment": "^2.30.1",

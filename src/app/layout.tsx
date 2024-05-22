@@ -5,6 +5,7 @@ import { Providers } from "./providers";
 import { Navbar } from "@/components/Navbar";
 import { getMenuItems } from "@/datahelpers/getMenuItems";
 import { PAGE_DESCRIPTIONS, PAGE_TITLES } from "@/constants";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -29,6 +30,7 @@ export default async function RootLayout({
           <Navbar menu={menu} />
           <div className="flex flex-1 bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-50">
             {children}
+            <SpeedInsights />
           </div>
         </Providers>
       </body>
