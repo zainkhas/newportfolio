@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import { Providers } from "./providers";
 import { Navbar } from "@/components/Navbar";
@@ -31,6 +32,7 @@ export default async function RootLayout({
           <div className="flex flex-1 bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-50">
             {children}
             <SpeedInsights />
+            <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_KEY || ""} />
           </div>
         </Providers>
       </body>
