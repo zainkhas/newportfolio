@@ -4,7 +4,13 @@ import { IconLinkProps } from "./types";
 
 const IconLink: FC<IconLinkProps> = ({ url, icon, name }) => {
   return (
-    <Link href={url} key={name} title={name} target="_blank" rel="noreferrer">
+    <Link
+      href={url}
+      key={name}
+      title={name}
+      target="_blank"
+      rel="noreferrer noopener nofollow"
+    >
       <Image src={`/svg/${icon}`} alt={name} height={30} width={30} />
     </Link>
   );
